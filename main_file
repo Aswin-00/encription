@@ -1,0 +1,16 @@
+import random
+f=open('image.txt','r') #put the path on the file  here 
+w=open('write.txt','a') #put the path were u want to save the file
+ent=["%","^","&","$","#","@","!"]
+for u in f:
+    v=list(u)
+    w.write("\n")
+    for i in range(0,len(u)):
+        if u[i]==" ":
+            w.write('_')
+        else:
+            w.write(str(u[i])+ent[random.randint(0,(len(ent)-1))])
+
+
+f.close()
+w.close()
